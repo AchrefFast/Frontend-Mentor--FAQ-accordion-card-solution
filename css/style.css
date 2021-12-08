@@ -1,0 +1,207 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  --background-url: url('../images/bg-pattern-mobile.svg');
+  --f-size-title: 2.8em;
+  --f-size-text: 1.1rem;
+  --margin-top-image: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(180deg, #af67e9 0%, #6565e7 100%);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+.container {
+  padding: 2em;
+}
+
+.card {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  background-image: var(--background-url);
+  background-repeat: no-repeat;
+  background-size: 75% auto;
+  background-position: top center;
+  padding-inline: 2em;
+  padding-bottom: 4em;
+  padding-top: 28vw;
+  margin-top: 40%;
+  margin-bottom: 4em;
+  -webkit-box-shadow: 0 30px 30px rgba(0, 0, 0, 0.253);
+          box-shadow: 0 30px 30px rgba(0, 0, 0, 0.253);
+}
+
+.card .card__image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+  width: 75%;
+  height: auto;
+}
+
+.card__content .card__title {
+  font-size: var(--f-size-title);
+  text-align: center;
+  margin-block: 1em;
+  color: #1d1e35;
+}
+
+.card__content .question {
+  font-size: var(--f-size-text);
+  line-height: 1.5;
+  position: relative;
+  color: #787887;
+  font-weight: 400;
+}
+
+.card__content .question::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e7e7e9;
+}
+
+.card__content .question .question__q {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-block: 1.2em;
+  color: #4a4b5e;
+}
+
+.card__content .question .question__q:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.card__content .question .bold {
+  margin-bottom: .5em;
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+.card__content .question .flip {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card__content .question .question__a {
+  height: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.card__content .question .appear {
+  height: auto;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  padding-bottom: 1.2em;
+}
+
+@media (min-width: 600px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 12px;
+    --f-size-title: 2.6rem;
+    --background-url: url('../images/bg-pattern-desktop.svg');
+  }
+  .container {
+    padding-inline: 2em;
+  }
+}
+
+@media (min-width: 800px) and (min-width: 1000px) {
+  .container {
+    padding-inline: 5em;
+  }
+}
+
+@media (min-width: 800px) {
+  .card {
+    max-width: 920px;
+    background-image: none;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    -ms-grid-columns: 1fr 1.3fr;
+        grid-template-columns: 1fr 1.3fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .card .card__content {
+    margin-bottom: 2em;
+    padding: 5em 4em;
+  }
+}
+
+@media (min-width: 800px) and (min-width: 1000px) {
+  .card .card__content {
+    padding: 5em 8em;
+  }
+}
+
+@media (min-width: 800px) {
+  .card .card__content .card__title {
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    text-align: left;
+  }
+  .card .card__image {
+    background-image: url(../images/illustration-woman-online-desktop.svg), url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto,  auto;
+    background-position: right center, right bottom 35%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    left: 0;
+  }
+  .card .card__image .image__woman {
+    display: none;
+  }
+  .card .card__image .image__box {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 42%;
+    left: -28%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
