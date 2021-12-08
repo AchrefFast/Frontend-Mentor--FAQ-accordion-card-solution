@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
--  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--Huddle-landing-page-with-single-introductory-section-solution)
-- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--Huddle-landing-page-with-single-introductory-section-solution)
+-  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--FAQ-accordion-card-solution)
+- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--FAQ-accordion-card-solution)
 
 ## My process
 
