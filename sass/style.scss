@@ -37,6 +37,10 @@
         width: 75%;
         height: auto;
     }
+
+    .image__box{
+        display: none;
+    }
 }
 
 .card__content{
@@ -169,6 +173,7 @@
             }
 
             .image__box{
+                display: black;
                 position: absolute;
                 width: 50%;
                 height: auto;

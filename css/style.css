@@ -55,6 +55,10 @@
   height: auto;
 }
 
+.card .image__box {
+  display: none;
+}
+
 .card__content .card__title {
   font-size: var(--f-size-title);
   text-align: center;
@@ -197,6 +201,7 @@
     display: none;
   }
   .card .card__image .image__box {
+    display: black;
     position: absolute;
     width: 50%;
     height: auto;
