@@ -4,12 +4,14 @@
     width: 100%;
     min-height: 100vh;
     background: color(pr-gradient-bckg-soft-blue);
-    display: grid;
-    place-items: center;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .container{
+    flex-basis: 100%;
     padding: 2em;
 }
 
@@ -53,13 +55,16 @@
 
     }
 
+
     .question{
+        width: 100%;
         font-size: var(--f-size-text);
         line-height: 1.5;
         position: relative;
         color: color(nt-dark-grayish-blue);
         font-weight: 400;
-
+        padding-block: 1.2em;
+ 
         &::after{
             content: '';
             position: absolute;
@@ -74,7 +79,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-block: 1.2em;
             color: color(nt-very-dark-grayish-blue);
 
             &:hover{
@@ -83,26 +87,33 @@
             }
         }
 
-        .bold{
-            margin-bottom: .5em;
-            font-weight: 700;
-            color: color(pr-text-very-dark-blue);
-        }
-
-        .flip{
-            transform: rotate(180deg);
+        .question__arrow{
+            transform: rotate(0deg);
         }
 
         .question__a{
-            height: 0;
             transform: scaleY(0);
+            opacity: 0;
+            transform-origin: top;
+            transition: transform .18s, opacity .1s ease-in;
         }
-        
-        .appear{
-            height: auto;
-            transform: scaleY(1);
-            padding-bottom: 1.2em;
+
+        details[open]{
+            .question__q{
+                margin-bottom: .7em;
+                font-weight: 700;
+                color: color(pr-text-very-dark-blue);
+            }
+            .question__arrow{
+                transform: rotate(180deg);
+            }
+
+            .question__a{
+                transform: scaleY(1);
+                opacity: 1;
+            }
         }
+
     }
 }
 
@@ -121,6 +132,10 @@
     }
 
     .container{
+        flex: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-inline: 2em;
 
         @media (min-width: 1000px){
@@ -130,6 +145,7 @@
     }
 
     .card{
+        flex-basis: 100%;
         max-width: 920px;
         background-image: none;
         display: grid;
@@ -141,8 +157,9 @@
         margin: 0;
 
         .card__content{
+            min-width: 100%;
             margin-bottom: 2em;
-            padding: 5em 4em;
+            padding: 5em 5em;
 
             @media (min-width: 1000px){
                 padding: 5em 8em;
@@ -150,7 +167,7 @@
             
             .card__title{
                 margin-top: 0;
-                margin-bottom: 1.2em;
+                margin-bottom: .8em;
                 text-align: left;
             }
         }
